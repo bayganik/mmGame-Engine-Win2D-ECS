@@ -31,7 +31,9 @@ There are included components that have special meaning.
     
 Systems do the guts of the logic of the game.  They are executed once every frame and process all entities that match certain components.
 
-Below examples have "Debug" flag on.  F11 will flip "Debug" off/on.  Click on tank then move using arrow keys.  The red boxes are BoxColliders drawn as debug guide.
+Below examples have "Debug" flag on.  F11 will flip "Debug" off/on.  Click on tank then move using WASD keys.  
+
+The red boxes are BoxColliders drawn as debug guide.
 
 ## To Start a VS2022 project:
 
