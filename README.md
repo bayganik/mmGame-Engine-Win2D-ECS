@@ -45,43 +45,25 @@ using Windows.ApplicationModel.Core;
 using mmGameEngine;
 
 namespace mmGameEngineTest
-
 {
-
     class App
-    
     {
         //----------------
-        
         // Step 01
-        
         //----------------
-        
         // Main entry into the game
-        
         public static void Main(string[] args)
-        
         {
-        
             //
             //     Gets the main CoreApplicationView(IFrameworkViewSource)
-            
             //     instance for all running apps that use this
-            
             //     CoreApplication instance.
-            
             //
-            
             IFrameworkViewSource ivs = new ViewSource();
-            
             //
-            
             // Tell CoreApplication to run "ivs" using mmGameApp.cs (Step 03) which is IFrameworkView
-            
-            //
-            
+            //            
             CoreApplication.Run(ivs);
-
         }
     }
     class ViewSource : IFrameworkViewSource
