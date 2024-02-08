@@ -1,7 +1,7 @@
 ## Feb 08, 2024
 
 Using Win2d CoreWindow (no WPF/XAML) to create game window.  I use swapchain which covers entire window, allowing for mouse clicks no matter how user resizes the window.
-This is a 2D game framework engine.  I am waiting for Win2d to move into WindowsAppSdk and WinUI3 (as of Feb 8, 2024 no news).
+This is a 2D game framework engine.  I am waiting for Win2d to move into WindowsAppSdk and WinUI3 (as of Feb 8, 2024 no news https://github.com/microsoft/Win2D).
 
 https://github.com/rocwood/Entitas-Lite        (I've included Entitas as part of engine, since I made some minor additions)
 
