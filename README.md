@@ -45,6 +45,7 @@ using Windows.ApplicationModel.Core;
 using mmGameEngine;
 
 namespace mmGameEngineTest
+
 {
     class App
     {
