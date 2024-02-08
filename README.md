@@ -86,7 +86,7 @@ namespace mmGameEngineTest
 
 ## Play Scene
 
-![game image](PlayScene.jpg)
+![game image](GameScene.jpg)
 
 
 
