@@ -34,38 +34,53 @@ Below examples have "Debug" flag on.  F9 will flip "Debug" off/on.  The tank wil
 
 ## To Start a VS2022 project:
 
-    Start with Net 7.0 console app
-    
-    Using Dependencies add Raylib-cs Nuget package
-    
-    Add references to Entitas-Lite , mmGameEngine and Sanford.MIDI
+    Start with UWP app
+       
+    Add reference to mmGameEngine
  
 ## Your App.cs
 
 using Windows.ApplicationModel.Core;
+
 using mmGameEngine;
 
 namespace mmGameEngineTest
+
 {
+
     class App
+    
     {
         //----------------
+        
         // Step 01
+        
         //----------------
+        
         // Main entry into the game
+        
         public static void Main(string[] args)
+        
         {
+        
             //
             //     Gets the main CoreApplicationView(IFrameworkViewSource)
+            
             //     instance for all running apps that use this
+            
             //     CoreApplication instance.
+            
             //
+            
             IFrameworkViewSource ivs = new ViewSource();
+            
             //
+            
             // Tell CoreApplication to run "ivs" using mmGameApp.cs (Step 03) which is IFrameworkView
+            
             //
+            
             CoreApplication.Run(ivs);
-
 
         }
     }
