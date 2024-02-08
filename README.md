@@ -48,6 +48,7 @@ namespace mmGameEngineTest
 
 {
     class App
+    
     {
         //----------------
         // Step 01
@@ -67,6 +68,7 @@ namespace mmGameEngineTest
             CoreApplication.Run(ivs);
         }
     }
+    
     class ViewSource : IFrameworkViewSource
     {
         //----------------
