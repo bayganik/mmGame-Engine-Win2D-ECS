@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{7EAE53EC-177B-4259-A342-8693707FADBC}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mmGameEngineTest</RootNamespace>
+    <AssemblyName>mmGameEngineTest</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="BlockPosition.cs" />
+    <Compile Include="ECS\Components\CrossHairComponent.cs" />
+    <Compile Include="ECS\Components\DragComponent.cs" />
+    <Compile Include="ECS\Components\ExplosionComponent.cs" />
+    <Compile Include="ECS\Components\Grid\GridBlock.cs" />
+    <Compile Include="ECS\Components\PileDispComponent.cs" />
+    <Compile Include="ECS\Components\TankComponent.cs" />
+    <Compile Include="ECS\Components\Tetris\CurrentGridBlock.cs" />
+    <Compile Include="ECS\Components\Tetris\ZBlock.cs" />
+    <Compile Include="ECS\Components\Tetris\TBlock.cs" />
+    <Compile Include="ECS\Components\Tetris\SBlock.cs" />
+    <Compile Include="ECS\Components\Tetris\LBlock.cs" />
+    <Compile Include="ECS\Components\Tetris\JBlock.cs" />
+    <Compile Include="ECS\Components\Tetris\IBlock.cs" />
+    <Compile Include="ECS\Components\Tetris\OBlock.cs" />
+    <Compile Include="ECS\Components\TurretComponent.cs" />
+    <Compile Include="ECS\Systems\ExplosionSystem.cs" />
+    <Compile Include="ECS\Systems\BulletMoveSystem.cs" />
+    <Compile Include="ECS\Systems\TetrisKeySystem.cs" />
+    <Compile Include="Scenes\CardScene.cs" />
+    <Compile Include="Content.cs" />
+    <Compile Include="ECS\Components\ScoreComponent.cs" />
+    <Compile Include="ECS\Systems\GameStateSystem.cs" />
+    <Compile Include="ECS\Systems\PileDispSystem.cs" />
+    <Compile Include="ECS\Systems\DragDispPileSystem.cs" />
+    <Compile Include="ECS\Systems\MouseClickSystem.cs" />
+    <Compile Include="Scenes\TetrisScene.cs" />
+    <Compile Include="Scenes\GameScene.cs" />
+    <Compile Include="ECS\Components\GameStateComponent.cs" />
+    <Compile Include="PileOfCards.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ECS\Systems\TankSystem.cs" />
+    <Compile Include="ECS\Systems\TurretSystem.cs" />
+    <Compile Include="TetrisGameState.cs" />
+    <Compile Include="TetrisManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Background.png" />
+    <Content Include="Assets\Button_3stage.png" />
+    <Content Include="Assets\Cards\10C.png" />
+    <Content Include="Assets\Cards\10D.png" />
+    <Content Include="Assets\Cards\10H.png" />
+    <Content Include="Assets\Cards\10S.png" />
+    <Content Include="Assets\Cards\165724-200.png" />
+    <Content Include="Assets\Cards\2C.png" />
+    <Content Include="Assets\Cards\2D.png" />
+    <Content Include="Assets\Cards\2H.png" />
+    <Content Include="Assets\Cards\2S.png" />
+    <Content Include="Assets\Cards\3C.png" />
+    <Content Include="Assets\Cards\3D.png" />
+    <Content Include="Assets\Cards\3H.png" />
+    <Content Include="Assets\Cards\3S.png" />
+    <Content Include="Assets\Cards\4767-200.png" />
+    <Content Include="Assets\Cards\4C.png" />
+    <Content Include="Assets\Cards\4D.png" />
+    <Content Include="Assets\Cards\4H.png" />
+    <Content Include="Assets\Cards\4S.png" />
+    <Content Include="Assets\Cards\5C.png" />
+    <Content Include="Assets\Cards\5D.png" />
+    <Content Include="Assets\Cards\5H.png" />
+    <Content Include="Assets\Cards\5S.png" />
+    <Content Include="Assets\Cards\6C.png" />
+    <Content Include="Assets\Cards\6D.png" />
+    <Content Include="Assets\Cards\6H.png" />
+    <Content Include="Assets\Cards\6S.png" />
+    <Content Include="Assets\Cards\7C.png" />
+    <Content Include="Assets\Cards\7D.png" />
+    <Content Include="Assets\Cards\7H.png" />
+    <Content Include="Assets\Cards\7S.png" />
+    <Content Include="Assets\Cards\8C.png" />
+    <Content Include="Assets\Cards\8D.png" />
+    <Content Include="Assets\Cards\8H.png" />
+    <Content Include="Assets\Cards\8S.png" />
+    <Content Include="Assets\Cards\9C.png" />
+    <Content Include="Assets\Cards\9D.png" />
+    <Content Include="Assets\Cards\9H.png" />
+    <Content Include="Assets\Cards\9S.png" />
+    <Content Include="Assets\Cards\AC.png" />
+    <Content Include="Assets\Cards\aces.png" />
+    <Content Include="Assets\Cards\AD.png" />
+    <Content Include="Assets\Cards\AH.png" />
+    <Content Include="Assets\Cards\arrows.png" />
+    <Content Include="Assets\Cards\AS.png" />
+    <Content Include="Assets\Cards\back_cards-07.png" />
+    <Content Include="Assets\Cards\blue_back.png" />
+    <Content Include="Assets\Cards\CardDeck_72x100.png" />
+    <Content Include="Assets\Cards\computer_icon.png" />
+    <Content Include="Assets\Cards\crazy8s_icon.png" />
+    <Content Include="Assets\Cards\deck.png" />
+    <Content Include="Assets\Cards\deckResize.png" />
+    <Content Include="Assets\Cards\deck_icon.png" />
+    <Content Include="Assets\Cards\deck_icon_2.png" />
+    <Content Include="Assets\Cards\DRAW.png" />
+    <Content Include="Assets\Cards\EmptyHolder.png" />
+    <Content Include="Assets\Cards\gofish_icon.png" />
+    <Content Include="Assets\Cards\gray_back.png" />
+    <Content Include="Assets\Cards\green_back.png" />
+    <Content Include="Assets\Cards\honors_spade-14.png" />
+    <Content Include="Assets\Cards\honor_clubs.png" />
+    <Content Include="Assets\Cards\honor_diamond.png" />
+    <Content Include="Assets\Cards\honor_heart-14.png" />
+    <Content Include="Assets\Cards\images %281%29.jpg" />
+    <Content Include="Assets\Cards\images.jpg" />
+    <Content Include="Assets\Cards\jack_triples.png" />
+    <Content Include="Assets\Cards\JC.png" />
+    <Content Include="Assets\Cards\JD.png" />
+    <Content Include="Assets\Cards\JH.png" />
+    <Content Include="Assets\Cards\JS.png" />
+    <Content Include="Assets\Cards\KC.png" />
+    <Content Include="Assets\Cards\KD.png" />
+    <Content Include="Assets\Cards\KH.png" />
+    <Content Include="Assets\Cards\KS.png" />
+    <Content Include="Assets\Cards\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\Cards\person-icon.png" />
+    <Content Include="Assets\Cards\purple_back.png" />
+    <Content Include="Assets\Cards\QC.png" />
+    <Content Include="Assets\Cards\QD.png" />
+    <Content Include="Assets\Cards\QH.png" />
+    <Content Include="Assets\Cards\QS.png" />
+    <Content Include="Assets\Cards\red_back - Copy.png" />
+    <Content Include="Assets\Cards\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Cards\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Cards\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Cards\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Cards\StoreLogo.png" />
+    <Content Include="Assets\Cards\topcard_icon.png" />
+    <Content Include="Assets\Cards\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\Cards\yellow_back - Copy.png" />
+    <Content Include="Assets\Img\background.png" />
+    <Content Include="Assets\Img\Base.png" />
+    <Content Include="Assets\Img\Button_empty.png" />
+    <Content Include="Assets\Img\Button_empty1.JPG" />
+    <Content Include="Assets\Img\characters.png" />
+    <Content Include="Assets\Img\crosshair.png" />
+    <Content Include="Assets\Img\flame232x148.png" />
+    <Content Include="Assets\Img\GameBackground.jpg" />
+    <Content Include="Assets\Img\GameBackground.png" />
+    <Content Include="Assets\Img\hand.png" />
+    <Content Include="Assets\Img\Map.png" />
+    <Content Include="Assets\Img\Tank Base.png" />
+    <Content Include="Assets\Img\Tank Turret.png" />
+    <Content Include="Assets\Img\TankAlter.png" />
+    <Content Include="Assets\Img\TankMissile.png" />
+    <Content Include="Assets\Img\wallLong.png" />
+    <Content Include="Assets\Img\wallTall.png" />
+    <Content Include="Assets\Img\WheelSmall.png" />
+    <Content Include="Assets\Map\Images\Tileset_Ivan_Voirol.png" />
+    <Content Include="Assets\Map\tileset_dungeon.png" />
+    <Content Include="Assets\Missile\EXP001.png" />
+    <Content Include="Assets\Missile\FIR001.png" />
+    <Content Include="Assets\Missile\Missile41x140.png" />
+    <Content Include="Assets\Missile\Rocket - Copy.png" />
+    <Content Include="Assets\Missile\Rocket26x9.png" />
+    <Content Include="Assets\Missile\Rocket9x26.png" />
+    <Content Include="Assets\Missile\RocketSmoke12x12.png" />
+    <Content Include="Assets\Missile\RocketTail7x9.png" />
+    <Content Include="Assets\Piano\bkey.png" />
+    <Content Include="Assets\Piano\bkey_large.png" />
+    <Content Include="Assets\Piano\bkey_med.png" />
+    <Content Include="Assets\Piano\black_key - Copy.png" />
+    <Content Include="Assets\Piano\black_key.png" />
+    <Content Include="Assets\Piano\white_key.png" />
+    <Content Include="Assets\Piano\wkey.png" />
+    <Content Include="Assets\Piano\wkey_large.png" />
+    <Content Include="Assets\Piano\wkey_med.png" />
+    <Content Include="Assets\PlayerBackground.png" />
+    <Content Include="Assets\Player\btn_black_eject.png" />
+    <Content Include="Assets\Player\btn_black_next.png" />
+    <Content Include="Assets\Player\btn_black_pause.png" />
+    <Content Include="Assets\Player\btn_black_play.png" />
+    <Content Include="Assets\Player\btn_black_prev.png" />
+    <Content Include="Assets\Player\btn_black_stop.png" />
+    <Content Include="Assets\Player\btn_blue_next.png" />
+    <Content Include="Assets\Player\btn_blue_pause.png" />
+    <Content Include="Assets\Player\btn_blue_play.png" />
+    <Content Include="Assets\Player\btn_blue_prev.png" />
+    <Content Include="Assets\Player\btn_blue_stop.png" />
+    <Content Include="Assets\Player\btn_green_eject.png" />
+    <Content Include="Assets\Player\btn_green_next.png" />
+    <Content Include="Assets\Player\btn_green_pause.png" />
+    <Content Include="Assets\Player\btn_green_play.png" />
+    <Content Include="Assets\Player\btn_green_prev.png" />
+    <Content Include="Assets\Player\btn_green_stop.png" />
+    <Content Include="Assets\Player\btn_red_next.png" />
+    <Content Include="Assets\Player\btn_red_pause.png" />
+    <Content Include="Assets\Player\btn_red_prev.png" />
+    <Content Include="Assets\Player\btn_red_stop.png" />
+    <Content Include="Assets\Player\button_black_ffw.png" />
+    <Content Include="Assets\Player\button_black_pause.png" />
+    <Content Include="Assets\Player\button_black_play.png" />
+    <Content Include="Assets\Player\button_black_rew.png" />
+    <Content Include="Assets\Player\button_black_stop.png" />
+    <Content Include="Assets\Player\button_green_play.png" />
+    <Content Include="Assets\Player\eject_blk.png" />
+    <Content Include="Assets\Player\eject_grn.png" />
+    <Content Include="Assets\Player\InfoScreen.png" />
+    <Content Include="Assets\Player\play_blk.png" />
+    <Content Include="Assets\Player\play_grn.png" />
+    <Content Include="Assets\Player\stop_blk.png" />
+    <Content Include="Assets\Player\stop_grn.png" />
+    <Content Include="Assets\Slider\BackgroundMetal - Copy.png" />
+    <Content Include="Assets\Slider\BackgroundMetal.png" />
+    <Content Include="Assets\Slider\BlankOnOff.png" />
+    <Content Include="Assets\Slider\KnobMetal.png" />
+    <Content Include="Assets\Slider\KnobMetalSmall.png" />
+    <Content Include="Assets\Slider\KnobSoft.png" />
+    <Content Include="Assets\Slider\Mixer1.png" />
+    <Content Include="Assets\Slider\MuteOff.png" />
+    <Content Include="Assets\Slider\MuteOff0.png" />
+    <Content Include="Assets\Slider\MuteOn.png" />
+    <Content Include="Assets\Slider\SelOff.png" />
+    <Content Include="Assets\Slider\SelOff0.png" />
+    <Content Include="Assets\Slider\SelOn.png" />
+    <Content Include="Assets\Slider\SelOn0.png" />
+    <Content Include="Assets\Slider\SliderKnobBlk.png" />
+    <Content Include="Assets\Slider\SliderMetal.png" />
+    <Content Include="Assets\Slider\SliderMetalOriginal.png" />
+    <Content Include="Assets\Slider\SliderMetalSmall.png" />
+    <Content Include="Assets\Slider\SliderMetalSmall0.png" />
+    <Content Include="Assets\Slider\SliderSimple.png" />
+    <Content Include="Assets\Slider\SliderSoft.png" />
+    <Content Include="Assets\Slider\SliderSoftSmall.png" />
+    <Content Include="Assets\Slider\SlideTicks.png" />
+    <Content Include="Assets\Slider\SlideTicks_big.png" />
+    <Content Include="Assets\Slider\SlideTicks_Med.png" />
+    <Content Include="Assets\Slider\SoloOff.png" />
+    <Content Include="Assets\Slider\SoloOff0.png" />
+    <Content Include="Assets\Slider\SoloOn.png" />
+    <Content Include="Assets\Slider\Trk00Off.png" />
+    <Content Include="Assets\Slider\Trk00On.png" />
+    <Content Include="Assets\Slider\Trk01Off.png" />
+    <Content Include="Assets\Slider\Trk01On.png" />
+    <Content Include="Assets\Slider\Trk02Off.png" />
+    <Content Include="Assets\Slider\Trk02On.png" />
+    <Content Include="Assets\Slider\Trk03Off.png" />
+    <Content Include="Assets\Slider\Trk03On.png" />
+    <Content Include="Assets\Slider\Trk04Off.png" />
+    <Content Include="Assets\Slider\Trk04On.png" />
+    <Content Include="Assets\Slider\Trk05Off.png" />
+    <Content Include="Assets\Slider\Trk05On.png" />
+    <Content Include="Assets\Slider\Trk06Off.png" />
+    <Content Include="Assets\Slider\Trk06On.png" />
+    <Content Include="Assets\Slider\Trk07Off.png" />
+    <Content Include="Assets\Slider\Trk07On.png" />
+    <Content Include="Assets\Slider\Trk08Off.png" />
+    <Content Include="Assets\Slider\Trk08On.png" />
+    <Content Include="Assets\Slider\Trk09Off.png" />
+    <Content Include="Assets\Slider\Trk09On.png" />
+    <Content Include="Assets\Slider\Trk10Off.png" />
+    <Content Include="Assets\Slider\Trk10On.png" />
+    <Content Include="Assets\Slider\Trk11Off.png" />
+    <Content Include="Assets\Slider\Trk11On.png" />
+    <Content Include="Assets\Slider\Trk12Off.png" />
+    <Content Include="Assets\Slider\Trk12On.png" />
+    <Content Include="Assets\Slider\Trk13Off.png" />
+    <Content Include="Assets\Slider\Trk13On.png" />
+    <Content Include="Assets\Slider\Trk14Off.png" />
+    <Content Include="Assets\Slider\Trk14On.png" />
+    <Content Include="Assets\Slider\Trk15Off.png" />
+    <Content Include="Assets\Slider\Trk15On.png" />
+    <Content Include="Assets\Slider\TrkOff.png" />
+    <Content Include="Assets\Slider\TrkOn.png" />
+    <Content Include="Assets\Sound\boom.wav" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\Tetris\Block-I.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tetris\Block-J.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tetris\Block-L.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tetris\Block-O.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tetris\Block-S.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tetris\Block-T.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tetris\Block-Z.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tetris\TileBlue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tetris\TileCyan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tetris\TileEmpty.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tetris\TileGreen.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tetris\TileOrange.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tetris\TilePurple.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tetris\TileRed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tetris\TileYellow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.14</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mmGameEngine\mmGameEngine.csproj">
+      <Project>{9f1db027-d02c-45fd-9172-67e6bb7d8fab}</Project>
+      <Name>mmGameEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\arial.ttf" />
+    <Content Include="Assets\Fonts\toon.ttf" />
+    <Content Include="Assets\Fonts\Volkhov-Regular.ttf" />
+    <None Include="Assets\Map\Desert.tmx" />
+    <None Include="Assets\Map\Level1.tmx" />
+    <None Include="Assets\TimGM6mb.sf2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ECS\Entities\" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

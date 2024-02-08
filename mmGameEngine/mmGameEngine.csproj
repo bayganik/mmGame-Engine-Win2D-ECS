@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F1DB027-D02C-45FD-9172-67E6BB7D8FAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mmGameEngine</RootNamespace>
+    <AssemblyName>mmGameEngine</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.20348.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CanvasRendererNOTUSED.cs" />
+    <Compile Include="ECS\Components\CardGame\CardComponent.cs" />
+    <Compile Include="ECS\Components\CardGame\CardPileComponent.cs" />
+    <Compile Include="ECS\Components\Component.cs" />
+    <Compile Include="ECS\Components\Game_UI\ButtonComponent.cs" />
+    <Compile Include="ECS\Components\Game_UI\GridComponent.cs" />
+    <Compile Include="ECS\Components\Game_UI\MsgBoxComponent.cs" />
+    <Compile Include="ECS\Components\Game_UI\PanelComponent.cs" />
+    <Compile Include="ECS\Components\Game_UI\ProgressBarComponent.cs" />
+    <Compile Include="ECS\Components\Game_UI\TextComponent.cs" />
+    <Compile Include="ECS\Components\Game_UI\LabelComponent.cs" />
+    <Compile Include="ECS\Components\Game_UI\TileComponent.cs" />
+    <Compile Include="ECS\Components\Misc\MouseComponent.cs" />
+    <Compile Include="ECS\Components\Sprite\SpriteAnimation.cs" />
+    <Compile Include="ECS\Components\Sprite\ScrollingImage.cs" />
+    <Compile Include="ECS\Components\Sprite\Sprite.cs" />
+    <Compile Include="ECS\Components\Sprite\SpriteSlices.cs" />
+    <Compile Include="ECS\Entities\ImageCursor.cs" />
+    <Compile Include="ECS\Entities\MouseEntity.cs" />
+    <Compile Include="ECS\Systems\CursorMoveSystem.cs" />
+    <Compile Include="Entitas\Collector\Collector.cs" />
+    <Compile Include="Entitas\Collector\CollectorContextExtension.cs" />
+    <Compile Include="Entitas\Collector\CollectorException.cs" />
+    <Compile Include="Entitas\Collector\CollectorExtension.cs" />
+    <Compile Include="Entitas\Collector\ICollector.cs" />
+    <Compile Include="Entitas\Collector\TriggerOnEvent.cs" />
+    <Compile Include="Entitas\Collector\TriggerOnEventMatcherExtension.cs" />
+    <Compile Include="Entitas\Context\ComponentIndex.cs" />
+    <Compile Include="Entitas\Context\Context.cs" />
+    <Compile Include="Entitas\Context\ContextAttribute.cs" />
+    <Compile Include="Entitas\Context\ContextExtension.cs" />
+    <Compile Include="Entitas\Context\ContextGeneric.cs" />
+    <Compile Include="Entitas\Context\ContextInfo.cs" />
+    <Compile Include="Entitas\Context\Contexts.cs" />
+    <Compile Include="Entitas\Context\Exceptions\ContextDoesNotContainEntityException.cs" />
+    <Compile Include="Entitas\Context\Exceptions\ContextEntityIndexDoesAlreadyExistException.cs" />
+    <Compile Include="Entitas\Context\Exceptions\ContextEntityIndexDoesNotExistException.cs" />
+    <Compile Include="Entitas\Context\Exceptions\ContextInfoException.cs" />
+    <Compile Include="Entitas\Context\Exceptions\ContextStillHasRetainedEntitiesException.cs" />
+    <Compile Include="Entitas\Context\Exceptions\EntityIsNotDestroyedException.cs" />
+    <Compile Include="Entitas\Context\IContext.cs" />
+    <Compile Include="Entitas\Context\IContexts.cs" />
+    <Compile Include="Entitas\EntitasCache.cs" />
+    <Compile Include="Entitas\EntitasException.cs" />
+    <Compile Include="Entitas\EntitasResources.cs" />
+    <Compile Include="Entitas\EntityIndex\AbstractEntityIndex.cs" />
+    <Compile Include="Entitas\EntityIndex\EntityIndex.cs" />
+    <Compile Include="Entitas\EntityIndex\EntityIndexException.cs" />
+    <Compile Include="Entitas\EntityIndex\IEntityIndex.cs" />
+    <Compile Include="Entitas\EntityIndex\PrimaryEntityIndex.cs" />
+    <Compile Include="Entitas\Entity\Entity.cs" />
+    <Compile Include="Entitas\Entity\EntityComponents.cs" />
+    <Compile Include="Entitas\Entity\EntityEqualityComparer.cs" />
+    <Compile Include="Entitas\Entity\EntityPosition.cs" />
+    <Compile Include="Entitas\Entity\Exceptions\EntityAlreadyHasComponentException.cs" />
+    <Compile Include="Entitas\Entity\Exceptions\EntityDoesNotHaveComponentException.cs" />
+    <Compile Include="Entitas\Entity\Exceptions\EntityIsAlreadyRetainedByOwnerException.cs" />
+    <Compile Include="Entitas\Entity\Exceptions\EntityIsNotEnabledException.cs" />
+    <Compile Include="Entitas\Entity\Exceptions\EntityIsNotRetainedByOwnerException.cs" />
+    <Compile Include="Entitas\Entity\IAERC.cs" />
+    <Compile Include="Entitas\Entity\IEntity.cs" />
+    <Compile Include="Entitas\Entity\SafeAERC.cs" />
+    <Compile Include="Entitas\Entity\UnsafeAERC.cs" />
+    <Compile Include="Entitas\Extensions\CollectionExtension.cs" />
+    <Compile Include="Entitas\Extensions\ComponentStringExtension.cs" />
+    <Compile Include="Entitas\Extensions\ContextStringExtension.cs" />
+    <Compile Include="Entitas\Extensions\PublicMemberInfoEntityExtension.cs" />
+    <Compile Include="Entitas\Extensions\SystemStringExtension.cs" />
+    <Compile Include="Entitas\Feature\Feature.cs" />
+    <Compile Include="Entitas\Feature\FeatureAttribute.cs" />
+    <Compile Include="Entitas\Feature\FeatureHelper.cs" />
+    <Compile Include="Entitas\Group\Group.cs" />
+    <Compile Include="Entitas\Group\GroupEvent.cs" />
+    <Compile Include="Entitas\Group\GroupExtension.cs" />
+    <Compile Include="Entitas\Group\GroupSingleEntityException.cs" />
+    <Compile Include="Entitas\Group\IGroup.cs" />
+    <Compile Include="Entitas\IComponent.cs" />
+    <Compile Include="Entitas\Matcher\Interfaces\IAllOfMatcher.cs" />
+    <Compile Include="Entitas\Matcher\Interfaces\IAnyOfMatcher.cs" />
+    <Compile Include="Entitas\Matcher\Interfaces\ICompoundMatcher.cs" />
+    <Compile Include="Entitas\Matcher\Interfaces\IMatcher.cs" />
+    <Compile Include="Entitas\Matcher\Interfaces\INoneOfMatcher.cs" />
+    <Compile Include="Entitas\Matcher\Matcher.cs" />
+    <Compile Include="Entitas\Matcher\MatcherEquals.cs" />
+    <Compile Include="Entitas\Matcher\MatcherException.cs" />
+    <Compile Include="Entitas\Matcher\MatcherExtension.cs" />
+    <Compile Include="Entitas\Matcher\MatcherGeneric.cs" />
+    <Compile Include="Entitas\Matcher\MatcherStatic.cs" />
+    <Compile Include="Entitas\Matcher\MatcherToString.cs" />
+    <Compile Include="Entitas\Monitor\IMonitor.cs" />
+    <Compile Include="Entitas\Monitor\Monitor.cs" />
+    <Compile Include="Entitas\Monitor\MonitorList.cs" />
+    <Compile Include="Entitas\Systems\ExecuteSystem.cs" />
+    <Compile Include="Entitas\Systems\Interfaces\ICleanupSystem.cs" />
+    <Compile Include="Entitas\Systems\Interfaces\IExecuteSystem.cs" />
+    <Compile Include="Entitas\Systems\Interfaces\IInitializeSystem.cs" />
+    <Compile Include="Entitas\Systems\Interfaces\IReactiveSystem.cs" />
+    <Compile Include="Entitas\Systems\Interfaces\ISystem.cs" />
+    <Compile Include="Entitas\Systems\Interfaces\ITearDownSystem.cs" />
+    <Compile Include="Entitas\Systems\ReactiveSystem.cs" />
+    <Compile Include="Entitas\Systems\Systems.cs" />
+    <Compile Include="Entitas\Utils\Caching\ObjectCache.cs" />
+    <Compile Include="Entitas\Utils\Caching\ObjectPool.cs" />
+    <Compile Include="Entitas\Utils\Configuration\AbstractConfigurableConfig.cs" />
+    <Compile Include="Entitas\Utils\Configuration\IConfigurable.cs" />
+    <Compile Include="Entitas\Utils\Configuration\Preferences.cs" />
+    <Compile Include="Entitas\Utils\Configuration\Properties.cs" />
+    <Compile Include="Entitas\Utils\Extensions\AppDomainExtension.cs" />
+    <Compile Include="Entitas\Utils\Extensions\DictionaryExtension.cs" />
+    <Compile Include="Entitas\Utils\Extensions\InterfaceTypeExtension.cs" />
+    <Compile Include="Entitas\Utils\Extensions\StringExtension.cs" />
+    <Compile Include="Entitas\Utils\Extensions\TypeSerializationExtension.cs" />
+    <Compile Include="Entitas\Utils\PublicMemberInfo\AttributeInfo.cs" />
+    <Compile Include="Entitas\Utils\PublicMemberInfo\PublicMemberInfo.cs" />
+    <Compile Include="Entitas\Utils\PublicMemberInfo\PublicMemberInfoExtension.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Graphics\WriteableBitmapEx\BitmapContext.cs" />
+    <Compile Include="Graphics\WriteableBitmapEx\BitmapFactory.cs" />
+    <Compile Include="Graphics\WriteableBitmapEx\WriteableBitmapAntialiasingExtensions.cs" />
+    <Compile Include="Graphics\WriteableBitmapEx\WriteableBitmapBaseExtensions.cs" />
+    <Compile Include="Graphics\WriteableBitmapEx\WriteableBitmapBlitExtensions.cs" />
+    <Compile Include="Graphics\WriteableBitmapEx\WriteableBitmapContextExtensions.cs" />
+    <Compile Include="Graphics\WriteableBitmapEx\WriteableBitmapConvertExtensions.cs" />
+    <Compile Include="Graphics\WriteableBitmapEx\WriteableBitmapFillExtensions.cs" />
+    <Compile Include="Graphics\WriteableBitmapEx\WriteableBitmapFilterExtensions.cs" />
+    <Compile Include="Graphics\WriteableBitmapEx\WriteableBitmapLineExtensions.cs" />
+    <Compile Include="Graphics\WriteableBitmapEx\WriteableBitmapShapeExtensions.cs" />
+    <Compile Include="Graphics\WriteableBitmapEx\WriteableBitmapSplineExtensions.cs" />
+    <Compile Include="Graphics\WriteableBitmapEx\WriteableBitmapTransformationExtensions.cs" />
+    <Compile Include="Input\Input.cs" />
+    <Compile Include="Managers\CardManager.cs" />
+    <Compile Include="Math\Mathf.cs" />
+    <Compile Include="Math\MathHelper.cs" />
+    <Compile Include="Math\Matrix.cs" />
+    <Compile Include="Math\Quaternion.cs" />
+    <Compile Include="Math\Vector2Ext.cs" />
+    <Compile Include="Math\Vector3.cs" />
+    <Compile Include="mmGameApp.cs" />
+    <Compile Include="ECS\Components\Physics\BoxAABB.cs" />
+    <Compile Include="ECS\Components\Physics\BoxCollider.cs" />
+    <Compile Include="ECS\Components\Physics\CircleAABB.cs" />
+    <Compile Include="ECS\Components\Physics\CircleCollider.cs" />
+    <Compile Include="ECS\Components\Physics\EntityMover.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ECS\Components\RenderComponent.cs" />
+    <Compile Include="Scene.cs" />
+    <Compile Include="Managers\SceneColliderManager.cs" />
+    <Compile Include="SwapChainManager.cs" />
+    <Compile Include="ECS\Components\TransformComponent.cs" />
+    <EmbeddedResource Include="Properties\mmGameEngine.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.14</Version>
+    </PackageReference>
+    <PackageReference Include="Win2D.uwp">
+      <Version>1.27.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Entitas\version" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
