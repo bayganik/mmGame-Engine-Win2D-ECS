@@ -1,21 +1,22 @@
 ## Feb 08, 2024
 
-The engine and a sample scenes with sprites, animated sprites, compound sprites + simple card game, 
+Using Win2d CoreWindows (no WPF/XAML) to create game window.  I use swapchain which covers entire window, allowing for mouse clicks no matter how user resizes the window.
+This is a 2D game framework engine.  I am waiting for Win8UI to update Win2d (as of Feb 8, 2024 no news).
 
-https://github.com/rocwood/Entitas-Lite        (I've included Entitas here, since I made some minor additions)
+https://github.com/rocwood/Entitas-Lite        (I've included Entitas as part of engine, since I made some minor additions)
 
 Entity Component System (ECS) is used to allow for separation of concern when coding (Entitas) 
 
-Scene is the base of the game.  Inside the Scene you add Entities that have Components.  Then you add a System to act on those entities.  If you don't add a system, you all you get is a scene displaying a bunch of things (like the Card Scene).  
+Scene is the base of the game.  Inside the Scene you add Entities that have Components.  Then you add a System to act on those entities.  If you don't add a system, all you get is a scene displaying a bunch of sprites or UI.  
 
-There are components that have special meaning.  
-
-    Each game is a scene holding Entities.
+Each game is a scene holding Entities.
         
-        * Game Entity (All the pieces used to do the game)
+    * Game Entity (All the pieces used to do the game)
         
-        * Scene Entity (typically UI elements that are drawn on top of all Game Entities)
-        
+    * Scene Entity (typically UI elements that are drawn on top of all Game Entities)
+    
+There are included components that have special meaning.  
+       
     Transform component gets added to all entities when scene creates them.
     
     Sprite component is used to display images
@@ -28,9 +29,9 @@ There are components that have special meaning.
     
     BoxCollider component allows the Entity to collide with other entities that have a collider
     
-Systems do the guts of the logic of the game.  They are executed once every frame and process all entities that match certain components (that we give them).
+Systems do the guts of the logic of the game.  They are executed once every frame and process all entities that match certain components.
 
-Below examples have "Debug" flag on.  F9 will flip "Debug" off/on.  The tank will move using arrow keys.  The red boxes are BoxColliders drawn as debug guide.
+Below examples have "Debug" flag on.  F11 will flip "Debug" off/on.  Click on tank then move using arrow keys.  The red boxes are BoxColliders drawn as debug guide.
 
 ## To Start a VS2022 project:
 
