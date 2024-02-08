@@ -86,7 +86,7 @@ namespace mmGameEngineTest
 
 ## Play Scene
 
-![game image](PlayScene.png)
+![game image](PlayScene.jpg)
 
 
 
@@ -98,7 +98,7 @@ namespace mmGameEngineTest
 
 ## Card Game Scene
 
-![game image](CardScene.png)
+![game image](CardScene.jpg)
 
 
 
