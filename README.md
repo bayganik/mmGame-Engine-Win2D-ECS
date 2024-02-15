@@ -28,6 +28,20 @@ There are included components that have special meaning.
     Text compoenent addes a text and will follow the entity on the screen 
     
     BoxCollider component allows the Entity to collide with other entities that have a collider
+
+    UI components allow for communication with game
+
+            Button 
+
+            Grid
+
+            Label
+
+            Panel (holder for other UI, so you can place it anywhere)
+
+            MsgBox (communicate with user with an OK button)
+
+            
     
 Systems do the guts of the logic of the game.  They are executed once every frame and process all entities that match certain components.
 
