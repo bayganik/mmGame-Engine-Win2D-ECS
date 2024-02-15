@@ -57,7 +57,8 @@ The red boxes are BoxColliders drawn as debug guide.
        
     Add reference to mmGameEngine
  
-## Your App.cs:
+## App.cs:
+
 using Windows.ApplicationModel.Core;
 
 using mmGameEngine;
