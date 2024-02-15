@@ -7,7 +7,7 @@ https://github.com/rocwood/Entitas-Lite        (I've included Entitas as part of
 
 Entity Component System (ECS) is used to allow for separation of concern when coding (Entitas) 
 
-Scene is the base of the game.  Inside the Scene you add ## Entities that have ## Components.  Then you add a System to act on those entities.  If you don't add a system, all you get is a scene displaying a bunch of sprites or UI.  
+Scene is the base of the game.  Inside the Scene you add an ENTITY that has a number of COMPONENTs.  Then you add one or more SYSTEM classes to act on those entities.  If you don't add a system, all you get is a scene displaying a bunch of sprites or UI.  
 
 Each game is a scene holding Entities.
         
