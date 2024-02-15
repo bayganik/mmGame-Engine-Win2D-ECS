@@ -52,6 +52,8 @@ The red boxes are BoxColliders drawn as debug guide.
 ## To Start a VS2022 project:
 
     Start with UWP app
+
+    Delete all XMAL codes, Add a class called App.cs
        
     Add reference to mmGameEngine
  
