@@ -15,7 +15,7 @@ Each game is a scene holding Entities.
         
     * Scene Entity (typically UI elements that are drawn on top of all Game Entities)
     
-There are included components that have special meaning.  
+There are components that have special meaning.  
        
     Transform component gets added to all entities when scene creates them.
     
@@ -23,9 +23,9 @@ There are included components that have special meaning.
     
     SpriteAnimation component adds an animated sprite using spritesheet
     
-    Tiled map component adds a TmxMap that allows you to access all of its levels & objects
+    Tiled map component allows you to have a TmxMap. You have access all of its levels & objects
     
-    Text compoenent addes a text and will follow the entity on the screen 
+    Text component addes a text and can follow the entity on the screen (as a child entity)
     
     BoxCollider component allows the Entity to collide with other entities that have a collider
 
