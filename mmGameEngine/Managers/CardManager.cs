@@ -8,6 +8,9 @@ using Entitas;
 
 namespace mmGameEngine
 {
+    /*
+     * This card deck manager is for a specific card image file "Assets/Cards/CardDeck_72x100.png"
+     */
     public class CardDeckManager
     {
         public CanvasBitmap CardDeckTexture;
@@ -22,9 +25,12 @@ namespace mmGameEngine
         public int CardBackBegin = 54;                  //card backs starting point (last row of cards)
         public bool CardsHaveCollider = true;           //each card dealt has a box collider
 
-        //object syncRoot = new System.Object();       //object for locking
-        //CardDeckManager _Instance;
-
+        private const int StandardDeckSize = 52;
+        private const int JokerIndex = 64;
+        private const int TotalCardBacks = 10;
+        private const int CardFaceCols = 13;
+        private const int CardBackStartIndex = 54;
+        private const int CardBackEndIndex = 63;
         //
         // One deck of cards
         //
@@ -32,7 +38,7 @@ namespace mmGameEngine
         // currentDeckNumber is zero based, so 0 is deck one
         // currentCardNumber is zero based, so 0 is 2 of hearts (in our image)
         //
-        //private List<StacksItems> cardStacks;         // card stack definitions
+
         CardComponent[] cardDeck;                         // card objects
         Rect[] SourceFrames;
 
@@ -40,7 +46,7 @@ namespace mmGameEngine
         int deckTotal = 1;                       // total number of decks
         Sprite _deckLocation;                    // object in the game that is location of deck of cards
 
-        int currentDeckNumber;                   // current deck of cards (if only one then value 0)
+        int currentDeckNumber = 0;               // current deck of cards (if only one then value 0)
         int currentCardNumber = 0;               // current card Number  in the deck 
         int currentCardBack = 6;                 // current back of a card
         float deckFanOut = 0.03f;                // value added to fan out the deck 
@@ -52,7 +58,6 @@ namespace mmGameEngine
         CanvasBitmap JockerCard;
         CanvasBitmap EmptyCardHolder;
 
-        //CanvasAnimatedControl cRenderer;
         public CardDeckManager(CanvasBitmap cardSheet, CanvasBitmap emptyCard)
         {
             Score = 0;
@@ -72,8 +77,8 @@ namespace mmGameEngine
 
             CardWidth = _width;
             CardHeight = _height;
-            cardFaces = new CanvasBitmap[52];             //card face images
-            cardBacks = new CanvasBitmap[10];             //card back images
+            cardFaces = new CanvasBitmap[StandardDeckSize];             //52 card face images
+            cardBacks = new CanvasBitmap[TotalCardBacks];               //10 card back images
 
             int cols = 13;
             int rows = 5;
@@ -95,12 +100,11 @@ namespace mmGameEngine
                 }
             }
 
-            //CanvasBitmap cardSheet = Raylib.LoadImage("AssetsEngine/Cards/CardDeck_72x100.png");
             CanvasBitmap temp;
             //
             // card image has 5 rows of 13 cards
             //
-            for (int i = 0; i < 52; i++)            //first 52 rectanges are face cards
+            for (int i = 0; i < StandardDeckSize; i++)            //first 52 rectanges are face cards
             {
                 cardFaces[i] = cards[i];
             }
@@ -108,7 +112,7 @@ namespace mmGameEngine
             // back of cards 54-63
             //
             int cardBackIndx = 0;
-            for (int i = 54; i < 63; i++)
+            for (int i = CardBackStartIndex; i < CardBackEndIndex; i++)
             {
                 cardBacks[cardBackIndx] = cards[i];
                 cardBackIndx++;
@@ -116,7 +120,7 @@ namespace mmGameEngine
             //
             // Joker is card 64
             //
-            JockerCard = cards[64];
+            JockerCard = cards[JokerIndex];
 
             currentCardBack = 6;
             currentCardNumber = 0;
@@ -132,13 +136,13 @@ namespace mmGameEngine
         public void CreateDeckOfCards(bool _shuffle = true)
         {
 
-            cardDeckPointer = new int[52];
-            cardDeck = new CardComponent[52];
+            cardDeckPointer = new int[StandardDeckSize];
+            cardDeck = new CardComponent[StandardDeckSize];
             Score = 0;
             //
             // Create 52 CardComponents
             //
-            for (int i = 0; i < 52; i++)
+            for (int i = 0; i < StandardDeckSize; i++)
             {
                 CardComponent card = new CardComponent();
                 //
@@ -181,7 +185,7 @@ namespace mmGameEngine
                 // 0 two, 1 three, 2 four, 3 five,... 8 ten, 9 jack, 10 queen, 11 king, 12 Ace
                 //
                 //
-                card.FaceImage = i % 13;
+                card.FaceImage = i % CardFaceCols;
                 //
                 // If this is a blackjack game the jack,queen,king = 10 points
                 // all number cards are their values, except Ace to be 1 or 11
@@ -266,9 +270,6 @@ namespace mmGameEngine
             // 5/16/2017 there is only ONE deck of cards
             //
             int cardPTR = cardDeckPointer[currentCardNumber];
-
-            if (currentCardNumber > 51)
-                cardPTR = -1;
 
             currentCardNumber += 1;
             return cardPTR;
@@ -365,21 +366,5 @@ namespace mmGameEngine
             CardComponent cardObj = cardDeck[cardPTR];
             return cardObj;
         }
-        //public Sprite GetCardFace(int cardPTR)
-        //{
-        //    //
-        //    // The face image of the card is returned
-        //    //
-        //    Sprite cardObj = cardFaces[cardPTR];
-        //    return cardObj;
-        //}
-        //public Sprite GetCardBack()
-        //{
-        //    //
-        //    // The back image of the card is returned
-        //    //
-        //    Sprite cardObj = cardBacks[currentCardBack];
-        //    return cardObj;
-        //}
     }
 }

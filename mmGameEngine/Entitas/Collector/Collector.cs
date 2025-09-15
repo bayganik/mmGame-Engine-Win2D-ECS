@@ -4,8 +4,10 @@ using System.Linq;
 
 namespace Entitas {
 
+    /// <summary>
     /// A Collector can observe one or more groups from the same context
     /// and collects changed entities based on the specified groupEvent.
+    /// </summary>
     public class Collector : ICollector {
 
         /// Returns all collected entities.

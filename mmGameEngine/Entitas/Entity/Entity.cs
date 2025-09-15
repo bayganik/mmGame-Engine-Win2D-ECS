@@ -134,6 +134,8 @@ namespace Entitas
                     _contextInfo.componentNames[index] + "' to " + this + "!"
                 );
             }
+            if (index < 0 || index >= _components.Length)
+                return;
 
             if (HasComponent(index)) {
                 throw new EntityAlreadyHasComponentException(

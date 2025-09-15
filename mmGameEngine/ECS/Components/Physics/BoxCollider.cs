@@ -125,7 +125,7 @@ namespace mmGameEngine
 				//
 				// update the database of colliders in this scene (happens only once)
 				//
-				SceneColliderManager.SetCollider(OwnerEntity, CollidreShape.Box);
+				SceneColliderManager.SetCollider(OwnerEntity, ColliderShape.Box);
 				setSceneColliders = true;
 			}
 		}

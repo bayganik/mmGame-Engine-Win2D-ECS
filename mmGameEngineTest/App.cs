@@ -37,8 +37,9 @@ namespace mmGameEngineTest
         //----------------
         public IFrameworkView CreateView()
         {
-            Global.CurrentScene = new GameScene();
-            //Global.CurrentScene = new CardScene();
+            //Global.CurrentScene = new TetrisScene();
+            Global.CurrentScene = new CardScene();
+            //Global.CurrentScene = new GameScene();
             return Global.CurrentScene;
         }
     }

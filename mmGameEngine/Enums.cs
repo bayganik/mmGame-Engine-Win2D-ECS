@@ -109,7 +109,7 @@ namespace mmGameEngine
         Center,
         Bottom
     }
-    public enum CollidreShape
+    public enum ColliderShape
     {
         Box,
         Circle

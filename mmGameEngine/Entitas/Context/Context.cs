@@ -339,7 +339,10 @@ namespace Entitas {
 		/// Clears the componentPool at the specified index.
 		public void ClearComponentPool(int index)
 		{
-			var componentPool = _componentPools[index];
+            if (index < 0 || index >= _componentPools.Length)
+                throw new ArgumentOutOfRangeException(nameof(index));
+
+            var componentPool = _componentPools[index];
 			if (componentPool != null)
 			{
 				componentPool.Clear();

@@ -37,10 +37,10 @@ namespace mmGameEngine
         internal static mmGameApp _instance;                                   //instance of game controller
         Scene _scene;
         Scene _nextScene;
-
+        const int _bufferCnt = 2;
         CanvasRenderTarget FrontBuffer { get { return accumulationBuffers[currentBuffer]; } }
         CanvasRenderTarget BackBuffer { get { return accumulationBuffers[(currentBuffer + 1) % 2]; } }
-        CanvasRenderTarget[] accumulationBuffers = new CanvasRenderTarget[2];
+        CanvasRenderTarget[] accumulationBuffers = new CanvasRenderTarget[_bufferCnt];
 
         CanvasDevice canvasdevice;
         SwapChainManager swapChainManager;
@@ -224,7 +224,23 @@ namespace mmGameEngine
         //
         public void Uninitialize()
         {
-            //Game Exits here
+            // Unregister event handlers
+            if (GameWindow != null)
+            {
+                GameWindow.KeyDown -= Window_KeyDown;
+                GameWindow.KeyUp -= Window_KeyReleased;
+                GameWindow.PointerPressed -= Window_PointerPressed;
+                GameWindow.PointerMoved -= Window_PointerMoved;
+                GameWindow.PointerReleased -= Window_PointerReleased;
+                GameWindow.ResizeCompleted -= Window_Resize;
+            }
+
+            foreach (var buffer in accumulationBuffers)
+            {
+                buffer?.Dispose();
+            }
+            canvasdevice?.Dispose();
+            swapChainManager?.SwapChain.Dispose();
         }
         public static Scene CurrentScene
         {

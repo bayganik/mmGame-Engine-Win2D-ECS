@@ -25,7 +25,7 @@ namespace mmGameEngine
         //
         // Give an entity a BoxCollider. If it has one, remove it, add it again
         //
-        public static void SetCollider(Entity entity, CollidreShape shapeNum)
+        public static void SetCollider(Entity entity, ColliderShape shapeNum)
         {
             if (ColliderCollection.ContainsKey(entity))
                 return;
@@ -64,10 +64,6 @@ namespace mmGameEngine
             //CircleCollider cx = entity.Get<CircleCollider>();
 
             BoxAABB boxA = bx.CollisionBox;
-            //Vector2 boxA = new Vector2(bx.CollisionBox.x, bx.CollisionBox.y);
-            //
-            // Find entity and ask
-
             //
             // Test collision with other "registered" BoxColliders
             //
@@ -75,7 +71,7 @@ namespace mmGameEngine
             {
                 if (entry.Key == entity)
                     continue;
-                if (entry.Value != (int)CollidreShape.Box)
+                if (entry.Value != (int)ColliderShape.Box)
                     continue;
 
                 Entity ent = entry.Key;
@@ -87,9 +83,6 @@ namespace mmGameEngine
                 {
                     _collisionResult.OwnerEntity = entry.Key;
                     _collisionResult.Collided = true;
-
-                    //_collisionResult.BoxContainer = entry.Value;
-                    //_collisionResult.CollisionArea = Raylib.GetCollisionRec(boxA, entry.Value);
                     return true;
                 }
             }
@@ -106,7 +99,7 @@ namespace mmGameEngine
         public bool Collided;
         public CollisionResult(bool _collided = false)
         {
-            Collided = false;
+            Collided = _collided;
             OwnerEntity = null;
             BoxContainer = new BoxAABB();
             CollisionArea = new Rectangle(0, 0, 0, 0);
